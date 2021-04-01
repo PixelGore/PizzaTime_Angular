@@ -1,0 +1,32 @@
+<div class="content">
+    <div class="container">
+        <div class="menu">
+
+            <div class="menu-category">
+                <span class="category__title">Category1</span>
+                <a href="#" class="menu-category__link">Go to Category1
+                </a>
+            </div>
+            <hr>
+
+            <div class="menu-items">
+                <div class="menu-item" *ngFor="let product of products">
+                    <img src="http://127.0.0.1:8000{{product.image}}" alt="menu-image" class="menu-item__image">
+
+                    <div class="menu-item__info">
+                        <span class="menu-item__title">{{product.name}}</span>
+                        <mat-icon class="menu__info-btn">info</mat-icon>
+                    </div>
+
+
+                    <div class="menu-item-end">
+                        <span class="item__price">{{product.price| currency:"USD"}}</span>
+                        <mat-icon>add_shopping_cart</mat-icon>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <a routerLink="" class="header__logo">
+                    <img src="assets/img/common/logo.svg" alt="Header__logo">
+                </a>
+                <div class="header__burger" [class.active]="burgerMenuOpen" (click)="toggleHamburger()">
+                    <span class="burger_middle"></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a [routerLink]="['/home']" routerLinkActive='isActive' class="header__link">
+                                <span class="header__link-text">
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/about']" routerLinkActive='isActive' class="header__link">
+                                <span class="header__link-text">
+                                    About us
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/menu']" routerLinkActive='isActive' class="header__link">
+                                <span class="header__link-text">
+                                    Menu
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/contacts']" routerLinkActive='isActive' class="header__link">
+                                <span class="header__link-text">
+                                    Contacts
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Login -->
+                <div class="header__end">
+                    <div class="header__login">
+                        <a href="#" class="header__login-link">
+                            <span class="login-text">
+                                <mat-icon class="login-icon">login</mat-icon>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Cart -->
+                    <div class="header__cart">
+                        <a href="#" class="header__cart-link">
+                            <span class="cart-text" [attr.data-before]="3">
+                                <mat-icon class="cart-icon">shopping_cart</mat-icon>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <!-- BurgerMenu-Start -->
+    <nav class="mobile-menu" [class.active]="burgerMenuOpen">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a [routerLink]="['/home']" class="nav-link" (click)="toggleHamburger()">
+                    <mat-icon class="login-icon">home</mat-icon>
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/about']" class="nav-link" (click)="toggleHamburger()">
+                    <mat-icon class="login-icon">groups</mat-icon>
+                    About us
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/menu']" class="nav-link" (click)="toggleHamburger()">
+                    <mat-icon class="login-icon">local_dining</mat-icon>
+                    Menu
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/contacts']" class="nav-link" (click)="toggleHamburger()">
+                    <mat-icon class="login-icon">contacts</mat-icon>
+                    Contacts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/login']" class="nav-link" (click)="toggleHamburger()">
+                    <mat-icon class="login-icon">login</mat-icon>
+                    Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- BurgerMenu-End -->
+</div>
